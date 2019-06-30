@@ -27,6 +27,7 @@ git clone https://github.com/Waginator/bowling-total-score-calculator.git
 ```
 
 ## Run the program
+You need Java 8 to run the program.
 
 via .jar file
 - Download .jar artifact [bowling-calculator-1.0.0.jar](https://github.com/Waginator/bowling-total-score-calculator/blob/master/src/artifacts/bowling-calculator-1.0.0.jar)
