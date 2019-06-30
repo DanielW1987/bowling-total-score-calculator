@@ -1,0 +1,23 @@
+apply plugin: 'java'
+group 'rocks.danielw'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+task customJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': 'rocks.danielw.bowling.BowlingTotalScoreCalculatorApplication'
+    }
+    
+    baseName = 'bowling-calculator'
+    // from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+dependencies {
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.5.0-RC2'
+    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.5.0-RC2'
+}
